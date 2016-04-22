@@ -1,0 +1,22 @@
+# PostgreSQL. Versions 8.2 and up are supported.
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+
+development:
+  <<: *default
+  database: flood-risk-admin-develop
+
+test:
+  <<: *default
+  database: flood-risk-admin-test
+
+production:
+  <<: *default
+  database: flood-risk-admin-production
+  username: flood-risk-admin
+  password: <%= ENV['FLOOD-RISK-ADMIN_DATABASE_PASSWORD'] %>
