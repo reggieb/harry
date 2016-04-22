@@ -24,6 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "flood_risk_engine", 
     git: "https://github.com/EnvironmentAgency/flood-risk-engine", 
     branch: 'develop'
+  
+gem 'devise' # user authentication
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
